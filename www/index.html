@@ -6,22 +6,40 @@
         <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width">
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
         <title>Hello World</title>
     </head>
     <body>
-    	<div id='contenedor'>
-        <div class="app">
+    <div id='app'><!-- app  //-->
+    	<div id='contenedor'><!-- contenedor  //-->
+        
+        <div id='inicio' class="animated bounce delay-2s" style="margin-top:10%;">
+        <div class="app" style="margin-top:10%;">
             <h1>iTUNES MVP</h1>
             <div id="deviceready" class="blink">
-                <p class="event listening">CONECTANDO...</p>
-                <p class="event received">DATOS RECIBIDOS</p>
+                <p class="event listening" id="con">CONECTANDO...</p>
+                <p class="event received" id="rec">DATOS RECIBIDOS</p>
             </div>
         </div>
         </div>
+        
+        </div><!-- contenedor  //-->
+  </div> <!-- app  //-->
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="js/canciones.js"></script>
         <script src="js/ajax.js"></script>
+        <script src="js/vue.js"></script>
     </body>
 </html>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+          title: "Falabella API",
+          canciones: []
+        }        
+    })
+</script>

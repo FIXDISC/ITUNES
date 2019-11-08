@@ -1,0 +1,4 @@
+#Fri Nov 08 09:28:36 CLST 2019
+base.0=C\:\\xampp\\htdocs\\ITUNES_1\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -6,9 +6,10 @@
 </head>
 
 <body class="body1" style="background-color:#666; margin: 0px; color:#FFF; font-size:2vw;">
+<div id='listado'>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="animated bounceInRight" style="background-color:#333; margin:5px;">
-  <tr v-for='cacion in canciones'>
-    <td><span class="body1" style="background-color:#666; margin: 0px; color:#FFF; font-size:2vw;">LISTA</span></td>
+  <tr>
+    <td>LISTA</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -20,10 +21,10 @@
     <td>&nbsp;</td>
     <td>LISTA</td>
     <td>PREVIEW</td>
-    <td>AGREGAR</td>
+    <td>CALIFICAR</td>
     <td>&nbsp;</td>
   </tr>
-  <tr>
+  <tr v-for='cacion in canciones'>
     <td><img id='foto' name='foto' src="" width="100" height="100" alt="img"></td>
     <td style="vertical-align:top; text-align:left">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -40,7 +41,7 @@
         <td>&nbsp;</td>
         </tr>
     </table></td>
-    <td>&nbsp;</td>
+    <td>????</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -54,5 +55,6 @@
     <td>&nbsp;</td>
   </tr>
 </table>
+</div>
 </body>
 </html>

@@ -18,20 +18,24 @@ fetch(url, {mode: 'cors'})
 
 
 function muestra_canciones(data){
-	canciones = [];
-	Object.keys(data).forEach(function(k){
-		//console.log(k + ' - ' + data[k]);
-		//canciones.push(data.results[0].artworkUrl100);
-		console.log(data[k]);
-			for(v=0;v<data[k].length;v++){
-				//console.log(data[k][v]);
-				//console.log("ART: "+data[k][v].artistName);
-				canciones.push("{"+data[k][v].artworkUrl100+","+data[k][v].collectionName+"}");
-			}
-	});
+	tot_res = data.resultCount;
+	results = data.results
 	
-	console.log(canciones);
-	return;
+	console.log(results);
+
+	listado = [];
+	for (v=0;v<tot_res;v++){
+		arte = '{"arte": "'+results[v].artworkUrl100+'",';
+		album = '"album": "'+results[v].collectionName+'",';
+		artista = '"artista": "'+results[v].artistName+'"}';
+		itemn = arte+album+artista;
+		listado.push(itemn);
+		//console.log(itemn);
+	}
+	listado="["+listado+"]";
+	listado = JSON.parse(listado);
+	console.log(listado);
+	
 	
 	document.getElementById('con').style.display='none';
 	document.getElementById('rec').style.display='block';
@@ -40,7 +44,7 @@ function muestra_canciones(data){
 	},2000);	
 	
 	setTimeout(function(){
-		document.getElementById('foto').src = data.results[0].artworkUrl100;
+		document.getElementById('foto').src = listado[0].arte;
 	},2100);
 	
 }

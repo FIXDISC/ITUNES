@@ -96,3 +96,7 @@ function cambia_cantidad(obj,indice){
 		document.getElementById("cir_com_0").style.backgroundImage = "url('img/cir_compras_2.png')";
 	}	
 }
+
+function go_home(){
+ document.getElementById('contenedor').innerHTML = home;	
+}

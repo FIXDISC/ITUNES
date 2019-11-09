@@ -34,7 +34,6 @@ var app = {
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         console.log('Received Event: ' + id);
-		busca_canciones();
     }
 };
 

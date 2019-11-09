@@ -2,24 +2,24 @@
 home="";
 function busca_canciones(termino){
 	home = document.getElementById('contenedor').innerHTML;
-	document.getElementById('esp').style.display='none';
-		document.getElementById('con').style.display='block';
 	if (document.getElementById('termino').value==""){alert('DEBE INGRSAR UN TEXTO');return;}
+	document.getElementById('esp').style.display='none';
+	document.getElementById('con').style.display='block';
 	termino = document.getElementById('termino').value.replace(/\s/g,"+");
-var url = "https://itunes.apple.com/search?term="+termino+"&mediaType=music&limit=20";
-console.log(url)
-var url = "1.txt";
-
-fetch(url, {mode: 'cors'})
-  .then(function(response) {
-    response.text().then(function(text) {
-      text = text.replace(/\s/g, '');
-
-      setTimeout(function(){
-			muestra_canciones(JSON.parse(text));  
-		},3000);
-    });
-  });
+	var url = "https://itunes.apple.com/search?term="+termino+"&mediaType=music&limit=20";
+	console.log(url)
+	var url = "1.txt";
+	
+	fetch(url, {mode: 'cors'})
+	  .then(function(response) {
+		response.text().then(function(text) {
+		  text = text.replace(/\s/g, '');
+	
+		  setTimeout(function(){
+				muestra_canciones(JSON.parse(text));  
+			},3000);
+		});
+	  });
 }
 
 
@@ -79,7 +79,7 @@ function muestra_canciones(data){
 			cell1.innerHTML = "<img id='foto' name='foto' src='"+listado[v-3].arte+"' width='100' height='100' alt='img'>";
 			cell2.innerHTML = table2;
 			cell3.innerHTML = "????";
-			cell4.innerHTML = "<iframe style='border:0; background-color='' src='"+listado[v-3].previewUrl+"' width='100%'></iframe> ";
+			cell4.innerHTML = "<iframe style='border:0; width:200px;' src='"+listado[v-3].previewUrl+"' width='100%'></iframe> ";
 		}
 	},2100);
 	

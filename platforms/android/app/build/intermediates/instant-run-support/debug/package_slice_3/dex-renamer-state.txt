@@ -1,4 +1,4 @@
-#Sat Nov 09 00:13:17 CLST 2019
-base.0=C\:\\xampp\\htdocs\\ITUNES_1\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\23
+#Sat Nov 09 02:57:32 CLST 2019
+base.0=C\:\\xampp\\htdocs\\ITUNES_1\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\80
 path.0=classes.dex
 renamed.0=classes.dex
